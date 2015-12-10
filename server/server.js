@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var path = require('path');
 var express = require('express');
 var stripe = require('stripe')('sk_test_iJGQtNCDSmOSroJKVAlFCdbB');
@@ -38,3 +39,5 @@ app.post('/charge', function (req, res, next) {
 var routes = express.Router();
 // routes.get('/getCreatives', handler.getArtists);
 routes.post('/payment', handler.getPayment)
+=======
+>>>>>>> 8510823fa8561b027e4115276bcc49a2edc8f738
