@@ -18,6 +18,10 @@
             url: '/catalyst',
             templateUrl: 'app/components/catalyst/views/catalystView.html'
           })
+          .state('catalyze', {
+            url: '/catalyze',
+            templateUrl: 'app/components/creative/views/catPayments.html'
+          })
           .state('creativeSignUp', {
             url: '/creativeSignUp',
             templateUrl: 'app/components/auth/views/authMainView.html'

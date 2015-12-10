@@ -9,6 +9,9 @@
 ///////////////////////
 // Request-Handlers  //
 ///////////////////////
+exports.getPayment = function(req,res){
+  console.log('token', req.body.stripeToken)
+}
 
 //Query all artists
 exports.getArtists = function(req, res) {
