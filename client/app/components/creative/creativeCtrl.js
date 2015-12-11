@@ -5,3 +5,6 @@ angular.module('cult.creative', [])
       charge($scope.amount);
     }
   }])
+  .controller('CreativeController', ['$state', function($state){
+    $state.go('creative.bio')
+  }])

@@ -11,7 +11,8 @@ angular
         })
         .state('creative', {
           url: '/creative',
-          templateUrl: 'app/components/creative/views/creativeView.html'
+          templateUrl: 'app/components/creative/views/creativeView.html',
+          controller: 'CreativeController'
         })
         .state('catalyst', {
           url: '/catalyst',
