@@ -17,6 +17,10 @@ angular
           url: '/catalyst',
           templateUrl: 'app/components/catalyst/views/catalystView.html'
         })
+        .state('payment', {
+          url: '/payment',
+          templateUrl: 'app/components/creative/views/payments.html'
+        })
         .state('creativeSignUp', {
           url: '/creativeSignUp',
           templateUrl: 'app/components/auth/views/authMainView.html'

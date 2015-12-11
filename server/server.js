@@ -1,6 +1,5 @@
 var path = require('path');
 var express = require('express');
-
 var logger = require('morgan');
 var handler = require('./request-handler');
 var cookieParser = require('cookie-parser');
@@ -25,3 +24,4 @@ app.listen(app.get('port'), function() {
 
 app.get('/getCreatives', handler.getCreatives);
 app.post('/newCreative', handler.newCreative);
+app.post('/charge', handler.charge);

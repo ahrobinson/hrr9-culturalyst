@@ -3,7 +3,7 @@
     'cult.auth',
     'cult.results',
     // 'cult.catalyst',
-    // 'cult.creative',
+    'cult.creative',
     'cult.ui-router',
     'cult.contentUpload'
   ]);

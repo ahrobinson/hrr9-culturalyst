@@ -1,7 +1,7 @@
 ///////////////////////
 //   Requirements    //
 ///////////////////////
-
+var stripe = require('stripe')('sk_test_iJGQtNCDSmOSroJKVAlFCdbB');
 //Database schema
 //var db = require('./db/schema.js');
 
@@ -32,3 +32,22 @@ exports.getCreatives = function(req, res) {
     }
   });
 };
+
+//charge them suckas!
+exports.charge = function (req, res, next) {
+  var stripeToken = req.body.stripeToken;
+  var amount = req.body.amount
+  console.log(amount)
+  var charge = stripe.charges.create({
+    amount: amount, // amount was in cents, but is converted on client side
+    currency: "usd",
+    source: stripeToken,
+    description: "Example charge"
+  }, function(err, charge) {
+    if (err && err.type === 'StripeCardError') {
+      // The card has been declined
+      console.log('declined bruh')
+    }
+    console.log(charge)
+  })
+}
